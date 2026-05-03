@@ -80,17 +80,18 @@ class SubClass(MainClass, Engine):                          # Inheritance with m
     def __str__(self):
         return "this is the __str__ function"
 
+if __name__ == "__main__":
 
-engine_instance = Engine()
-main_instance = MainClass("fog", "blue")
-child_instance = SubClass(666, "fog", "black", engine_instance)
+    engine_instance = Engine()
+    main_instance = MainClass("fog", "blue")
+    child_instance = SubClass(666, "fog", "black", engine_instance)
 
 
-print(child_instance.custom_function())
-print(child_instance.delete_private_message("dddd"))
-print(child_instance.polymorphism())
-print(main_instance.polymorphism())
-print(child_instance.__str__())
-print(SubClass.mro())    # MRO tells the method resolution order (search order for methods)
-print(isinstance(child_instance, MainClass))
-print(issubclass(SubClass, MainClass))
+    print(child_instance.custom_function())
+    print(child_instance.delete_private_message("dddd"))
+    print(child_instance.polymorphism())
+    print(main_instance.polymorphism())
+    print(child_instance.__str__())
+    print(SubClass.mro())    # MRO tells the method resolution order (search order for methods)
+    print(isinstance(child_instance, MainClass))
+    print(issubclass(SubClass, MainClass))
